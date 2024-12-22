@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer {
+  * {
+    @apply font-archivo;
+  }
+  .container-custom {
+    @apply container mx-auto w-[90vw] md:w-[95vw] lg:w-[90vw] xl:w-[70vw] 2xl:w-[60vw];
+  }
+
+  .fade-in {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 1s ease-in-out 1s forwards;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
