@@ -20,8 +20,12 @@ import up from './assets/up.svg';
 import wa from './assets/wa.svg';
 import wooz from './assets/wooz.png';
 import wrench from './assets/wrench.svg';
+import i1 from './assets/i1.png';
+import i2 from './assets/i2.png';
+import i3 from './assets/i3.png';
 
 export default function App() {
+    const [paket, setPaket] = React.useState("home");
     const [openSurvei, setOpenSurvei] = React.useState(true);
 
     const onClickDropdownSurvei = () => {
@@ -78,7 +82,7 @@ export default function App() {
             <section className='bg-white py-20'>
                 <div className="container-custom flex flex-col items-center gap-7">
                     <h1 className='text-primary-blue text-center text-xl lg:text-3xl font-bold'>Nikmati Internet Cepat dan Stabil di Rumah Bersama WOOZZ</h1>
-                    <p className='lg:text-xl text-center text-sm'>Internet Fiber Optik terjangkau untuk semua <span className="font-bold">mulai dari Rp 130rb-an per bulan</span> dengan kecepatan hingga <span className="font-bold">250Mbps</span></p>
+                    <p className='lg:text-xl text-center text-sm'>Internet Fiber Optik terjangkau untuk semua <span className="font-bold">mulai dari Rp 100rb-an per bulan</span> dengan kecepatan hingga <span className="font-bold">250Mbps</span></p>
                     <div id="trigger1" />
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] gap-10">
                         <Scene triggerElement="#trigger1" offset={-100} duration={300} >
@@ -90,10 +94,10 @@ export default function App() {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    <div className="rounded-xl bg-primary-orange p-4 flex flex-col items-center gap-2">
-                                        <img src={cable} className='h-[100px]' alt="" />
-                                        <p className='text-primary-blue mt-5 font-bold text-3xl'>100%</p>
-                                        <p className="text-primary-blue text-xl font-bold">Fiber Optic</p>
+                                    <div className="rounded-xl bg-primary-blue p-4 flex flex-col items-center gap-2">
+                                        <img src={i1} className='h-[100px] scale-150' alt="" />
+                                        <p className='text-white mt-5 font-bold text-4xl'>100%</p>
+                                        <p className="text-white text-xl font-bold">Fiber Optic</p>
                                     </div>
                                 </Tween>    
                             )}
@@ -107,10 +111,10 @@ export default function App() {
                                     totalProgress={progress}
                                     paused
                                 >
-                                     <div className="rounded-xl bg-primary-blue p-4 flex flex-col items-center gap-2">
-                            <img src={clock} className='h-[100px]' alt="" />
-                            <p className='text-white mt-5 font-bold text-3xl'>Unlimited</p>
-                            <p className="text-white text-xl font-medium">Tanpa Kuota</p>
+                                     <div className="rounded-xl bg-primary-orange p-4 flex flex-col items-center gap-2">
+                            <img src={i3} className='h-[100px] scale-150' alt="" />
+                            <p className='text-primary-blue mt-5 font-bold text-4xl'>Unlimited</p>
+                            <p className="text-primary-blue text-xl font-medium">Tanpa Kuota</p>
                         </div>
                                 </Tween>    
                             )}
@@ -124,10 +128,10 @@ export default function App() {
                                     totalProgress={progress}
                                     paused
                                 >
-                                    <div className="rounded-xl bg-primary-orange p-4 flex flex-col items-center gap-2">
-                            <img src={wrench} className='h-[100px]' alt="" />
-                            <p className='text-primary-blue mt-5 font-bold text-3xl'>Gratis</p>
-                            <p className="text-primary-blue text-xl font-bold">Biaya Pemasangan</p>
+                                    <div className="rounded-xl bg-primary-blue p-4 flex flex-col items-center">
+                            <img src={i2} className='h-[100px] scale-150' alt="" />
+                            <p className='text-white mt-5 font-bold text-4xl'>Gratis</p>
+                            <p className="text-white text-xl font-bold">Biaya Pemasangan</p>
                         </div>
                                 </Tween>    
                             )}
@@ -137,115 +141,222 @@ export default function App() {
             </section>
             <section className='bg-base py-20 flex flex-col items-center gap-5'>
                 <h1 className='text-primary-blue text-center text-xl lg:text-3xl font-bold'>Pilihan Paket Internet WOOZZ</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[80%] gap-10 mt-10">
-                                    <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
-                                        <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-primary-orange">NEWBIE</span></p>
-                                        <p className='text-primary-blue text-2xl font-medium'>Up to <span className='font-bold'> 10</span> mbps</p>
-                                        <div className="flex my-5">
-                                            <p className='text-primary-blue'>Rp</p>
-                                            <div className="flex flex-col">
-                                                <p className='text-7xl font-bold text-primary-blue'>135k</p>
-                                                <p className='text-primary-blue text-sm'>Perbulan</p>
-                                            </div>
-                                        </div>
-                                        <p>Internet Unlimeted</p>
-                                        <p>Free Instalasi</p>
-                                        <p>Idel Hingga 3 device</p>
-                                        <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
-                                            Pilih Paket
-                                        </button>
-                                    </div>
-                                    <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
-                                        <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-green-400">ROOKIE</span></p>
-                                        <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 15</span> mbps</p>
-                                        <div className="flex my-5">
-                                            <p className='text-primary-blue'>Rp</p>
-                                            <div className="flex flex-col">
-                                                <p className='text-7xl font-bold text-primary-blue'>165k</p>
-                                                <p className='text-primary-blue text-sm'>Perbulan</p>
-                                            </div>
-                                        </div>
-                                        <p>Internet Unlimeted</p>
-                                        <p>Free Instalasi</p>
-                                        <p>Idel Hingga 3 device</p>
-                                        <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
-                                            Pilih Paket
-                                        </button>
-                                    </div>
-                                    <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3 relative">
-                                    <img src={bestseller} className='absolute -top-4 -right-4' alt="" />
-                                        <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-pink-500">PRO</span></p>
-                                        <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 30</span> mbps</p>
-                                        <div className="flex my-5">
-                                            <p className='text-primary-blue'>Rp</p>
-                                            <div className="flex flex-col">
-                                                <p className='text-7xl font-bold text-primary-blue'>210k</p>
-                                                <p className='text-primary-blue text-sm'>Perbulan</p>
-                                            </div>
-                                        </div>
-                                        <p>Internet Unlimeted</p>
-                                        <p>Free Instalasi</p>
-                                        <p>Idel Hingga 5 device</p>
-                                        <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
-                                            Pilih Paket
-                                        </button>
-                                    </div>
-                                    <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3 relative">
-                                        <img src={recommended} className='absolute -top-4 -right-4' alt="" />
-                                        <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-blue-600">ELITE</span></p>
-                                        <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'>50</span> mbps</p>
-                                        <div className="flex my-5">
-                                            <p className='text-primary-blue'>Rp</p>
-                                            <div className="flex flex-col">
-                                                <p className='text-7xl font-bold text-primary-blue'>255k</p>
-                                                <p className='text-primary-blue text-sm'>Perbulan</p>
-                                            </div>
-                                        </div>
-                                        <p>Internet Unlimeted</p>
-                                        <p>Free Instalasi</p>
-                                        <p>Idel Hingga 3 device</p>
-                                        <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
-                                            Pilih Paket
-                                        </button>
-                                    </div>
-                                    <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
-                                        <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-purple-600">HEROIC</span></p>
-                                        <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 100</span> mbps</p>
-                                        <div className="flex my-5">
-                                            <p className='text-primary-blue'>Rp</p>
-                                            <div className="flex flex-col">
-                                                <p className='text-7xl font-bold text-primary-blue'>350k</p>
-                                                <p className='text-primary-blue text-sm'>Perbulan</p>
-                                            </div>
-                                        </div>
-                                        <p>Internet Unlimeted</p>
-                                        <p>Free Instalasi</p>
-                                        <p>Idel Hingga 3 device</p>
-                                        <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
-                                            Pilih Paket
-                                        </button>
-                                    </div>
-                                    <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
-                                        <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-red-500">LEGEND</span></p>
-                                        <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 250</span> mbps</p>
-                                        <div className="flex my-5">
-                                            <p className='text-primary-blue'>Rp</p>
-                                            <div className="flex flex-col">
-                                                <p className='text-7xl font-bold text-primary-blue'>600k</p>
-                                                <p className='text-primary-blue text-sm'>Perbulan</p>
-                                            </div>
-                                        </div>
-                                        <p>Internet Unlimeted</p>
-                                        <p>Free Instalasi</p>
-                                        <p>Idel Hingga 5 device</p>
-                                        <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
-                                            Pilih Paket
-                                        </button>
-                                    </div>
-                                    <div className="w-full flex justify-end col-span-1 md:col-span-2 xl:col-span-3">
-                                        <p>*Harga belum termasuk ppn</p>
-                                    </div>
+                <div className="flex items-center gap-2">
+                    <button className={`px-5 py-1 rounded text-xl ${paket === "home" ? "text-primary-blue bg-blue-300" : "bg-gray-300 text-gray-400"} font-bold`} onClick={() => setPaket("home")}>Wooz Home</button>
+                    <button className={`px-5 py-1 rounded text-xl ${paket === "wifi" ? "text-primary-blue bg-blue-300" : "bg-gray-300 text-gray-400"} font-bold`} onClick={() => setPaket("wifi")}>Wooz Wifi</button>
+                </div>
+                {paket === "home" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[80%] gap-10 mt-10">
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-primary-orange">NEWBIE</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Up to <span className='font-bold'> 10</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>135k</p>
+                                    <p className='text-primary-blue text-sm'>Perbulan</p>
+                                </div>
                             </div>
+                            <p>Internet Unlimeted</p>
+                            <p>Free Instalasi</p>
+                            <p>Idel Hingga 3 device</p>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-green-400">ROOKIE</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 15</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>165k</p>
+                                    <p className='text-primary-blue text-sm'>Perbulan</p>
+                                </div>
+                            </div>
+                            <p>Internet Unlimeted</p>
+                            <p>Free Instalasi</p>
+                            <p>Idel Hingga 3 device</p>
+                            <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3 relative">
+                        <img src={bestseller} className='absolute -top-4 -right-4' alt="" />
+                            <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-pink-500">PRO</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 30</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>210k</p>
+                                    <p className='text-primary-blue text-sm'>Perbulan</p>
+                                </div>
+                            </div>
+                            <p>Internet Unlimeted</p>
+                            <p>Free Instalasi</p>
+                            <p>Idel Hingga 5 device</p>
+                            <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3 relative">
+                            <img src={recommended} className='absolute -top-4 -right-4' alt="" />
+                            <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-blue-600">ELITE</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'>50</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>255k</p>
+                                    <p className='text-primary-blue text-sm'>Perbulan</p>
+                                </div>
+                            </div>
+                            <p>Internet Unlimeted</p>
+                            <p>Free Instalasi</p>
+                            <p>Idel Hingga 3 device</p>
+                            <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-purple-600">HEROIC</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 100</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>350k</p>
+                                    <p className='text-primary-blue text-sm'>Perbulan</p>
+                                </div>
+                            </div>
+                            <p>Internet Unlimeted</p>
+                            <p>Free Instalasi</p>
+                            <p>Idel Hingga 3 device</p>
+                            <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket <span className="text-red-500">LEGEND</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Up to  <span className='font-bold'> 250</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>600k</p>
+                                    <p className='text-primary-blue text-sm'>Perbulan</p>
+                                </div>
+                            </div>
+                            <p>Internet Unlimeted</p>
+                            <p>Free Instalasi</p>
+                            <p>Idel Hingga 5 device</p>
+                            <button className='bg-primary-blue group-hover:-rotate-6 transform duration-100 rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="w-full flex justify-end col-span-1 md:col-span-2 xl:col-span-3">
+                            <p>*Harga belum termasuk ppn</p>
+                        </div>
+                </div>
+                )}
+                {paket === "wifi" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-[80%] gap-10 mt-10">
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited <span className="text-primary-orange">Harian</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Speed up to <span className='font-bold'> 50</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>3000</p>
+                                    <p className='text-primary-blue text-sm'>Masa Berlaku 2 jam</p>
+                                </div>
+                            </div>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited <span className="text-primary-orange">Harian</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Speed up to <span className='font-bold'> 50</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>5000</p>
+                                    <p className='text-primary-blue text-sm'>Masa Berlaku 8 jam</p>
+                                </div>
+                            </div>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited <span className="text-primary-orange">Harian</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Speed up to <span className='font-bold'> 50</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>10.000</p>
+                                    <p className='text-primary-blue text-sm'>Masa Berlaku 24 jam</p>
+                                </div>
+                            </div>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited <span className="text-purple-500">Mingguan</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Speed up to <span className='font-bold'> 50</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>30.000</p>
+                                    <p className='text-primary-blue text-sm'>Masa Berlaku 7 hari</p>
+                                </div>
+                            </div>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited <span className="text-yellow-700">Bulanan</span></p>
+                            <p className='text-primary-blue text-2xl font-medium'>Speed up to <span className='font-bold'> 50</span> mbps</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>75.000</p>
+                                    <p className='text-primary-blue text-sm'>Masa Berlaku 30 hari</p>
+                                </div>
+                            </div>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+                        <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited</p>
+                            <p className="text-blue-600 text-center text-xl w-full">Speed Booster</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>5000</p>
+                                </div>
+                            </div>
+                            <p className="text-blue-800 text-center text-xl w-full">Tambah Perangkat</p>
+                            <div className="flex my-5">
+                                <p className='text-primary-blue'>Rp</p>
+                                <div className="flex flex-col">
+                                    <p className='text-7xl font-bold text-primary-blue'>5000</p>
+                                    <p className='text-primary-blue text-center text-sm'>Maksimal 3 Perangkat</p>
+                                </div>
+                            </div>
+                            <button className='group-hover:-rotate-6 transform duration-100 bg-primary-blue rounded-lg w-full mt-5 py-3 text-white text-xl'>
+                                Pilih Paket
+                            </button>
+                        </div>
+
+
+                        <div className="w-full flex justify-end col-span-1 md:col-span-2 xl:col-span-3">
+                            <p>*Harga belum termasuk ppn</p>
+                        </div>
+                </div>
+                )}
+                
             </section>
             <section className='bg-white py-20 flex flex-col gap-10'>
                 <div className="bg-primary-blue rounded-3xl flex flex-col md:flex-row gap-5 container-custom">
@@ -266,15 +377,15 @@ export default function App() {
                         <div className="bg-base p-5 flex flex-col gap-5 w-full rounded-lg">
                             <div className="w-full flex items-center justify-between">
                                 <p className="font-bold">Griya Alam Sentosa (Cileungsi, Bogor)</p>
-                                <button className='bg-yellow-500 whitespace-nowrap font-light px-4 py-1 rounded-full'>
+                                <a target='_blank' href="https://maps.app.goo.gl/jWArMWeS5ZEZfYcB7" className='bg-yellow-500 whitespace-nowrap font-light px-4 py-1 rounded-full'>
                                     Cek Lokasi
-                                </button>
+                                </a>
                             </div>
                             <div className="w-full flex items-center justify-between">
-                                <p className="font-bold">Aren Jaya (Bekasi Timur)</p>
-                                <button className='bg-yellow-500 whitespace-nowrap font-light px-4 py-1 rounded-full'>
+                                <p className="font-bold">Kranji (Bekasi, Jawa Barat)</p>
+                                <a target='_blank' href="https://maps.app.goo.gl/7NQSJExHqwQvNe8s9" className='bg-yellow-500 whitespace-nowrap font-light px-4 py-1 rounded-full'>
                                     Cek Lokasi
-                                </button>
+                                </a>
                             </div>
                             <div className="flex flex-col mt-5 gap-3 w-full items-center">
                                 <p className="font-bold text-xl">Ingin kami hadir diwilayahmu?</p>
