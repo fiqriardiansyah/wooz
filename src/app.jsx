@@ -38,7 +38,7 @@ export default function App() {
                 <meta property="og:title" content="Wooz" />
                 <meta property="og:site_name" content="Wooz" />
                 <meta property="og:url" content="" />
-                <meta property="og:description" content="Nikmati Internet Cepat dan Stabil di Rumah Bersama WOOZZ" />
+                <meta property="og:description" content="Nikmati Internet Cepat dan Stabil Bersama WOOZZ" />
                 <meta property="og:type" content="" />
                 <meta property="og:image" content="https://ik.imagekit.io/p4ukigs1hrvx/web%20banner%202_oe1yBX0Ov.png?updatedAt=1734856060428" />
             </Helmet>
@@ -329,7 +329,7 @@ export default function App() {
                             </button>
                         </div>
                         <div className="stagger bg-white p-4 rounded-xl group hover:scale-110 duration-100 hover:rotate-3">
-                            <p className='text-primary-blue text-3xl font-bold'>Paket Unlimited</p>
+                            <p className='text-primary-blue text-3xl font-bold'>Paket Add-On</p>
                             <p className="text-blue-600 text-center text-xl w-full">Speed Booster</p>
                             <div className="flex my-5">
                                 <p className='text-primary-blue'>Rp</p>
