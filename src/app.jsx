@@ -7,10 +7,11 @@ import { Controller, Scene } from 'react-scrollmagic';
 
 import banner from './assets/banner.png';
 import bestseller from './assets/bestseller.png';
-import cable from './assets/cable.svg';
-import clock from './assets/clock.svg';
 import cs from './assets/cs.png';
 import fb from './assets/facebook.svg';
+import i1 from './assets/i1.png';
+import i2 from './assets/i2.png';
+import i3 from './assets/i3.png';
 import ig from './assets/instagram.svg';
 import intetic from './assets/intetic.png';
 import laptop from './assets/laptop.png';
@@ -19,10 +20,6 @@ import recommended from './assets/receomended.png';
 import up from './assets/up.svg';
 import wa from './assets/wa.svg';
 import wooz from './assets/wooz.png';
-import wrench from './assets/wrench.svg';
-import i1 from './assets/i1.png';
-import i2 from './assets/i2.png';
-import i3 from './assets/i3.png';
 
 export default function App() {
     const [paket, setPaket] = React.useState("home");
@@ -430,10 +427,10 @@ export default function App() {
                             <p className='text-white text-sm'>Jl. Pulau Bali Raya No. 7 G, RT 004/RW010, Perumnas 3, Aren Jaya, Bekasi Timur, Bekasi, 17111</p>
                         </div>
                     </div>
-                    <button className='bg-green-500 text-white h-fit rounded-full w-auto px-5 py-2 flex font-semibold items-center gap-1'>
-                        <img src={wa} className='h-[30px] lg:inline-block hidden' alt="" />
+                    <a href='http://wa.me/+6285810036888' target='_blank' className='bg-green-500 text-white h-fit rounded-full w-auto px-5 py-2 flex font-semibold items-center gap-1'>
+                        <img src={wa} className='h-[30px] lg:inline-block hidden flex-1' alt="" />
                         <p>Whatsapp</p>
-                    </button>
+                    </a>
                 </div>
                 <p className="text-white text-sm font-light text-center mt-10">Copyright © 2024 by PT Aliansi Inovasi Global x PT Indo Teknologi Logistik</p>
             </section>
